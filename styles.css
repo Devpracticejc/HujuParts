@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Montserrat'; /* Replace with your font's name */
+  src: url('content/Montserrat/Montserrat-VariableFont_wght.ttf') format('ttf'); /* Replace with the actual path and format */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; /* Replace with your font's name */
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif; /* Replace with your font's name */
+}
+
+ul {
+list-style-type: none;
+padding-top: 20px;
+}
+
+/* off-screen menu*/
+.off-screen-menu {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .3 ease;
+}
+.off-screen-menu.active {
+  right: 0;
+  z-index: 10;
+}
+
+nav {
+  padding: 1rem;
+  display: flex;
+  background-color: white;
+}
+
+.ham-menu {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+  z-index: 15;
+}
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: rgba(3, 119, 252, 0.747);
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top:50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+a {
+  color: rgba(3, 119, 252);
+  text-decoration: none;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#reel {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 50%;
+  z-index: -1;
+}
+
+/* Add some content at the bottom of the video/page */
+.overlay {
+  position: fixed;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.616);
+  color: rgba(3, 119, 252);
+  width: 100%;
+  padding: 20px;
+}
+
+.images {
+max-width: 90%;
+height: auto;
+margin: auto;
+padding: 1rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100vw;
+  min-height: 60px;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+#help {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Gallery box */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 4px 4px 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width : 800px) {
+  .column {
+      flex: 100%;
+      max-width: 100%;
+  }
+}
+/* Gallery box */
