@@ -3,6 +3,29 @@
   src: url('content/Montserrat/Montserrat-VariableFont_wght.ttf') format('ttf'); /* Replace with the actual path and format */
 }
 
+/*remove default margins*/
+* {
+  margin: 0;
+}
+
+/*avoid text overflows*/
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif; /* Replace with your font's name */
   width: 100%;
